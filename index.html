@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-Wi3jRW+YmN6s7I7X3P6CBclAXycTYEhFmFk2wa8/tGdIhZgFzUVJoNQQ3hCJyQYUEu8veAzDK6XifMxUzP9FHQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+
+      <div class="logo"><a href="#">Dev Horus</a></div>
+      <ul class="links">
+        <li><a href="https://horus2504.github.io/Responsive-Navbar/">Inicio</a></li>
+        <li><a href="https://www.instagram.com/thiscolopes">Sobre</a></li>
+        <li><a
+            href="https://www.linkedin.com/in/francisco-lopes-84257a2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Contato</a>
+        </li>
+        <li><a href="https://github.com/Horus2504" class="action_btc">Github <i class="fab fa-github"></i></a></li>
+      </ul>
+      <div class="toggle-btc">
+
+
+        <i class="fa-solid fa-bars"></i>
+
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="https://horus2504.github.io/Responsive-Navbar/">Inicio</a></li>
+      <li><a href="https://www.instagram.com/thiscolopes">Sobre</a></li>
+      <li><a
+          href="https://www.linkedin.com/in/francisco-lopes-84257a2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Contato</a>
+      </li>
+      <li><a href="https://github.com/Horus2504" class="action_btc">Github <i class="fab fa-github"></i></a></li>
+      
+    </div>
+  </header>
+  <main>
+    <section id="hero">
+      <h1><strong>Bem-vindo ao Dev Horus!</strong></h1>
+      <p>
+        um projeto inovador e apaixonante que visa revolucionar a maneira como a tecnologia<br />
+        é percebida e utilizada em nossa sociedade.<br />
+        Nossa missão é trazer soluções criativas e eficazes para os desafios modernos<br />
+        por meio do desenvolvimento de software e serviços digitais.
+      </p>
+    </section>
+  </main>
+  <script>
+    const toggleBtc = document.querySelector('.toggle-btc');
+    const toggleBtcIcon = document.querySelector('.toggle-btc i');
+    const dropdownmenu = document.querySelector('.dropdown_menu');
+
+    toggleBtc.onclick = function () {
+      dropdownmenu.classList.toggle('open')
+      const isOpen = dropdownmenu.classList.contains('open')
+
+      toggleBtcIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
+</body>
+
+</html>
